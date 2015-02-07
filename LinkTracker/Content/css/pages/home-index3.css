@@ -1,0 +1,10 @@
+﻿.statsHeader {
+    margin: 40px 0 0 0;
+    width: 800px;
+}
+
+.linkDisplay {
+    width: 800px;
+}
+
+a { cursor: pointer; cursor: hand; }

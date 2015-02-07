@@ -1,0 +1,49 @@
+﻿@model p1p.Account.LoginModel
+
+@{
+    ViewBag.Title = "Log in";
+}
+
+@section pagecss {
+ @Html.IncludeVersionedCss("/pages/account-login.css")
+}
+
+@section pagejs{
+    @Html.IncludeVersionedJs("/pages/account-login.js")
+}
+
+
+<section id="loginForm">
+@using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class="login-container">
+        <div class="heading-blue heading-login">
+            <h4>Welcome</h4>
+        </div>
+        <form>
+            <div class="login-field">
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+                <i class="icon-user"></i>
+                @Html.ValidationMessageFor(m => m.UserName)
+            </div>
+            <div class="login-field">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password)
+                <i class="icon-lock"></i>
+                @Html.ValidationMessageFor(m => m.Password)
+            </div>            
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Html.LabelFor(m => m.RememberMe, new { @class = "checkbox" })            
+            <div class="login-button">
+                <button type="submit" class="smallbutton wide btn-block" value="Log In">SIGN IN <i class="icon-arrow-right"></i></button>
+            </div>
+            <div class="forgot-password">
+                <a href="/Account/ForgotPassword">Forgot password?</a>
+            </div>
+        </form>
+    </div>
+}
+</section>

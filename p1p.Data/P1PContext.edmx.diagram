@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c692840b409240259bf8a30f26ffb1e4" Name="Diagram1" ZoomLevel="87">
+        <EntityTypeShape EntityType="p1p.Data.BillingCycle" Width="1.5" PointX="0.875" PointY="0.875" />
+        <EntityTypeShape EntityType="p1p.Data.LinkBuildingMode" Width="1.875" PointX="6.25" PointY="15.25" />
+        <EntityTypeShape EntityType="p1p.Data.LinkLocation" Width="1.5" PointX="0.5" PointY="11.625" />
+        <EntityTypeShape EntityType="p1p.Data.LinkStatus" Width="1.5" PointX="7.75" PointY="10.375" />
+        <EntityTypeShape EntityType="p1p.Data.LinkStrategy" Width="1.5" PointX="1.25" PointY="14" />
+        <EntityTypeShape EntityType="p1p.Data.LinkType" Width="1.5" PointX="1.125" PointY="16.125" />
+        <EntityTypeShape EntityType="p1p.Data.OutreachAction" Width="1.5" PointX="5" PointY="11.875" />
+        <EntityTypeShape EntityType="p1p.Data.OutreachType" Width="1.5" PointX="5.25" PointY="10.125" />
+        <EntityTypeShape EntityType="p1p.Data.SiteCategory" Width="1.5" PointX="3.375" PointY="15.125" />
+        <EntityTypeShape EntityType="p1p.Data.Team" Width="1.5" PointX="10.265963667196203" PointY="2.9194443686490152" />
+        <EntityTypeShape EntityType="p1p.Data.TimeEntry" Width="1.5" PointX="4.8623606007836573" PointY="25.623246324073172" />
+        <EntityTypeShape EntityType="p1p.Data.ArticleStatus" Width="1.5" PointX="2.625" PointY="28" />
+        <EntityTypeShape EntityType="p1p.Data.Employee" Width="1.5" PointX="6" PointY="0.75" />
+        <EntityTypeShape EntityType="p1p.Data.Customer" Width="1.5" PointX="5.375" PointY="4" />
+        <EntityTypeShape EntityType="p1p.Data.ProjectArticleXREF" Width="1.5" PointX="7.375" PointY="25.875" />
+        <EntityTypeShape EntityType="p1p.Data.Article" Width="1.5" PointX="4.875" PointY="29.5" />
+        <AssociationConnector Association="p1p.Data.FK_Articles_ArticleStatus_Id" />
+        <AssociationConnector Association="p1p.Data.FK_PAXREF_Article_Id" />
+        <EntityTypeShape EntityType="p1p.Data.EmployeeTeamXREF" Width="1.5" PointX="13.125" PointY="1.875" />
+        <EntityTypeShape EntityType="p1p.Data.OrderEmployeeXREF" Width="1.5" PointX="9.875" PointY="12.875" />
+        <EntityTypeShape EntityType="p1p.Data.OrderTeamXREF" Width="1.5" PointX="13.125" PointY="16" />
+        <AssociationConnector Association="p1p.Data.FK_ETXREF_Employee_Id" />
+        <AssociationConnector Association="p1p.Data.FK_OEXREF_Employee_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ETXREF_Team_Id" />
+        <AssociationConnector Association="p1p.Data.FK_OTXREF_Team_Id" />
+        <EntityTypeShape EntityType="p1p.Data.Link" Width="1.5" PointX="15.875" PointY="19.125" />
+        <AssociationConnector Association="p1p.Data.fk_LinkBuildingMode" />
+        <AssociationConnector Association="p1p.Data.fk_LinkLocations" />
+        <AssociationConnector Association="p1p.Data.fk_LinkStatus" />
+        <AssociationConnector Association="p1p.Data.fk_LinkStrategy" />
+        <AssociationConnector Association="p1p.Data.fk_LinkType" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectArticleXREF_Id" />
+        <EntityTypeShape EntityType="p1p.Data.Keyword" Width="1.5" PointX="17.625" PointY="14.625" />
+        <EntityTypeShape EntityType="p1p.Data.LandingPageKeywordXREF" Width="1.5" PointX="17.125" PointY="11.375" />
+        <EntityTypeShape EntityType="p1p.Data.PersonaSocialAccountXREF" Width="1.5" PointX="18.875" PointY="22.25" />
+        <EntityTypeShape EntityType="p1p.Data.ProjectKeywordXREF" Width="1.5" PointX="19.875" PointY="8.5" />
+        <EntityTypeShape EntityType="p1p.Data.ProjectLandingPageXREF" Width="1.5" PointX="17.125" PointY="7.5" />
+        <EntityTypeShape EntityType="p1p.Data.ProjectPersonaXREF" Width="1.5" PointX="15.875" PointY="4.5" />
+        <EntityTypeShape EntityType="p1p.Data.ProjectSocialAccountXREF" Width="1.5" PointX="14.875" PointY="7.5" />
+        <AssociationConnector Association="p1p.Data.FK_LandingPageKeywordXREF_Keyword_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectKeywordXREF_Keyword_Id" />
+        <EntityTypeShape EntityType="p1p.Data.SocialAccount" Width="1.5" PointX="10.625" PointY="16.625" />
+        <AssociationConnector Association="p1p.Data.FK_PersonaSocialAccountXREF_SocialAccount_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectSocialAccountXREF_SocialAccount_Id" />
+        <EntityTypeShape EntityType="p1p.Data.Project" Width="1.5" PointX="10.625" PointY="5.625" />
+        <AssociationConnector Association="p1p.Data.fk_CycleId" />
+        <AssociationConnector Association="p1p.Data.FK_dbo_Projects_dbo_Customers_CustomerId" />
+        <AssociationConnector Association="p1p.Data.FK_dbo_Links_dbo_Projects_ProjectId" />
+        <AssociationConnector Association="p1p.Data.FK_OEXREF_Order_Id" />
+        <AssociationConnector Association="p1p.Data.FK_OTXREF_Order_Id" />
+        <AssociationConnector Association="p1p.Data.FK_PAXREF_Project_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectKeywordXREF_LandingPage_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectLandingPageXREF_Project_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectPersonaXREF_Project_Id" />
+        <AssociationConnector Association="p1p.Data.FK_dbo_TimeEntries_dbo_Projects_ProjectId" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectSocialAccountXREF_Project_Id" />
+        <EntityTypeShape EntityType="p1p.Data.LandingPage" Width="1.5" PointX="14.875" PointY="10.625" />
+        <AssociationConnector Association="p1p.Data.FK_LandingPageKeywordXREF_LandingPage_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectLandingPageXREF_LandingPage_Id" />
+        <EntityTypeShape EntityType="p1p.Data.OrderCategoryXREF" Width="1.5" PointX="18.875" PointY="4.25" />
+        <AssociationConnector Association="p1p.Data.FK_OCXREF_Category_Id" />
+        <AssociationConnector Association="p1p.Data.FK_OCXREF_Order_Id" />
+        <EntityTypeShape EntityType="p1p.Data.Outreach" Width="1.5" PointX="20.125" PointY="17" />
+        <EntityTypeShape EntityType="p1p.Data.Persona" Width="1.5" PointX="7.625" PointY="18" />
+        <AssociationConnector Association="p1p.Data.fk_ArticleId" />
+        <AssociationConnector Association="p1p.Data.FK_dbo_Outreaches_dbo_Links_LinkId" />
+        <AssociationConnector Association="p1p.Data.fk_OutreachAction" />
+        <AssociationConnector Association="p1p.Data.fk_OutreachType" />
+        <AssociationConnector Association="p1p.Data.fk_PersonaId" />
+        <AssociationConnector Association="p1p.Data.FK_PersonaSocialAccountXREF_Persona_Id" />
+        <AssociationConnector Association="p1p.Data.FK_ProjectPersonaXREF_Persona_Id" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

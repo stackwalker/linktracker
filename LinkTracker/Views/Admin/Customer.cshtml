@@ -1,0 +1,151 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/admin-customer.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/admin-customer-model.js")
+    @Html.IncludeVersionedJs("/pages/admin-customer.js")
+}
+<div id="contentWrap">
+    <div id="tabstrip">
+        <ul>
+            <li class="k-state-active">
+                Customer
+            </li>
+            <li>
+                Project
+            </li>
+        </ul>
+        <div>
+            <div id="grdCustomers"></div>
+        </div>
+        <div>
+            <div id="grdProjects"></div>
+        </div>
+    </div>
+</div>
+<div id="win-new-customer">
+    <table id="tbl-new-customer" class="formdata">
+        <tr>
+            <td>Business Name:</td>
+            <td><input id="new-business-name" /></td>
+            <td>First Name:</td>
+            <td><input id="new-first-name" /></td>
+            <td>Last Name:</td>
+            <td><input id="new-last-name" /></td>
+        </tr>
+        <tr>
+            <td>Street Address:</td>
+            <td><input id="new-street-address" /></td>
+            <td>City:</td>
+            <td><input id="new-city" /></td>
+            <td>State:</td>
+            <td><input id="new-state" /></td>
+            <td>Zip:</td>
+            <td><input id="new-zip" /></td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td><input id="new-business-url" /></td>
+            <td>Email:</td>
+            <td><input id="new-business-email" /></td>
+            <td>Phone:</td>
+            <td><input id="new-phone" /></td>
+        </tr>
+        <tr>
+            <td>Username:</td>
+            <td><input id="new-business-username" /></td>
+        </tr>
+    </table>
+    <button id="btn-save-customer" class="smallbutton">Save Customer</button>
+</div>
+<div id="win-update-customer">
+    <table id="tbl-update-customer" class="formdata">
+        <tr>
+            <td>Business Name:</td>
+            <td><input id="business-name" data-bind="value: BusinessName" /></td>
+            <td>First Name:</td>
+            <td><input id="first-name" data-bind="value: FirstName" /></td>
+            <td>Last Name:</td>
+            <td><input id="last-name" data-bind="value: LastName" /></td>
+        </tr>
+        <tr>
+            <td>Street Address:</td>
+            <td><input id="street-address" data-bind="value: StreetAddress" /></td>
+            <td>City:</td>
+            <td><input id="city" data-bind="value: City" /></td>
+            <td>State:</td>
+            <td><input id="state" data-bind="value: State" /></td>
+            <td>Zip:</td>
+            <td><input id="zip" data-bind="value: Zip" /></td>
+        </tr>
+        <tr>
+            <td>Website:</td>
+            <td><input id="business-url" data-bind="value: WebsiteURL" /></td>
+            <td>Email:</td>
+            <td><input id="business-email" data-bind="value: Email" /></td>
+            <td>Phone:</td>
+            <td><input id="phone" data-bind="value: Phone" /></td>
+        </tr>
+    </table>
+    <button id="btn-update-customer" class="smallbutton">Update Customer</button>
+</div>
+<div id="win-new-project">
+    <table id="tbl-new-project" class="formdata">
+        <tr>
+            <td>Customer:</td>
+            <td><input id="customer" /></td>
+            <td>Project Name:</td>
+            <td><input id="project-name" /></td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td colspan="3"><textarea id="project-description" class="wide-textarea"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="mode-active" class="project-active-mode mode-active">Active</button><button id="mode-inactive" class="project-active-mode mode-inactive">InActive</button></td>
+            <td>Cycle:</td>
+            <td><input id="project-billing-cycle" /></td>
+        </tr>
+        <tr>
+            <td>Categories:</td>
+            <td colspan="3"><input id="project-categories" /></td>
+        </tr>
+        <tr>
+            <td>Team:</td>
+            <td><input id="select-team" /></td>
+        </tr>
+    </table>
+    <button id="btn-save-project" class="smallbutton">Save Project</button>
+</div>
+<div id="win-update-project">
+    <table id="tbl-update-project" class="formdata">
+        <tr>
+            <td>Customer:</td>
+            <td><input id="update-customer" data-bind="value: Customer.Id" /></td>
+            <td>Project Name:</td>
+            <td><input id="update-project-name" data-bind="value: Name" /></td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td colspan="3"><textarea id="update-project-description" class="wide-textarea" data-bind="value: Description"></textarea></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button id="update-mode-active" class="project-active-mode mode-active" >Active</button><button id="update-mode-inactive" class="project-active-mode mode-inactive" >InActive</button></td>
+            <td>Cycle:</td>
+            <td><input id="update-project-billing-cycle" data-bind="value: BillingCycle.Id" /></td>
+        </tr>
+        <tr>
+            <td>Categories:</td>
+            <td colspan="3"><input id="update-categories" /></td>
+        </tr>
+        <tr>
+            <td>Team:</td>
+            <td><input id="update-select-team" data-bind="value: Team.Id" /></td>
+        </tr>
+    </table>
+    <button id="btn-update-project" class="smallbutton">Update Project</button>
+</div>
+

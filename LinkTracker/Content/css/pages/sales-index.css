@@ -1,0 +1,183 @@
+﻿#contentWrap {
+    padding: 10px 10px 0 10px;
+}
+
+#customercontainer {
+    margin: 5px 0 0 0;
+    border: solid 1px #E5E5E5;
+    padding: 15px;
+}
+
+.productpanel {
+    padding: 10px;
+}
+
+.seoproduct {
+    margin: 0 0 20px 0;
+
+}
+.producttitle {
+    float: left;
+    font-size: 1.4em;
+    color: #6A8E95;
+}
+
+.chkselectproduct {
+    float: left;
+    margin: 0 10px 0 0;
+}
+.productconfigure {
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+.productdescription {
+    margin: 5px 0 0 25px;
+    padding: 7px;
+    border: solid 1px #E5E5E5;
+}
+
+.window-overlay {
+    display: none;
+    width: 900px;
+}
+.clearboth {
+    clear: both;
+}
+
+.clearleft {
+    clear: left;
+}
+td {
+    padding: 5px;
+}
+
+.formdata input, textarea { 
+	padding: 9px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100%;
+	width: 200px;
+	background: #FFFFFF;
+	}
+
+textarea { 
+	width: 400px;
+	max-width: 400px;
+	height: 150px;
+	line-height: 150%;
+	}
+
+.formdata input:hover, .formdata textarea:hover, .formdata select:hover,
+.formdata input:focus, .formdata textarea:focus, .formdata select:focus { 
+	border-color: #C9C9C9; 
+	}
+
+.form label { 
+	margin-left: 10px; 
+	color: #999999; 
+	}
+
+.submit input {
+	width: auto;
+	padding: 9px 15px;
+	background: #617798;
+	border: 0;
+	font-size: 14px;
+	color: #FFFFFF;
+	}
+
+.formdata select {
+    padding:3px;
+    margin: 0;
+    background: #ffffff;
+    color:#888;
+    /*border:none;*/
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    /*appearance:none;*/
+    cursor:pointer;
+}
+
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+.formdata label {position:relative}
+.formdata label:after {
+    content:'>';
+    font:18px "Consolas", monospace;
+    color:#ffffff;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+.formdata label:before {
+    content:'';
+    right:0px; top:0px;
+    width:30px; height:30px;
+    background:#6A8E95;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+.bigbutton{
+text-align:center;
+text-decoration: none;
+font-family: sans-serif;
+-webkit-font-smoothing: antialiased;
+font-size: 150%;
+color: #FFF;
+background: #6A8E95;
+padding: 10px 30px;
+display: inline-block;
+white-space: nowrap;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 2px;
+margin: 10px 0;
+-webkit-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.bigbutton:hover {
+background: #ce7440;
+}
+
+/*TODO needs refactoring as these two only vary by size*/
+.smallbutton{
+text-align:center;
+text-decoration: none;
+font-family: sans-serif;
+-webkit-font-smoothing: antialiased;
+font-size: 110%;
+color: #FFF;
+background: #6A8E95;
+padding: 3px 10px;
+display: inline-block;
+white-space: nowrap;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 2px;
+margin: 10px 0;
+-webkit-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+.smallbutton:hover {
+background: #ce7440;
+}

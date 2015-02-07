@@ -1,0 +1,266 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/home-employee.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/home-employee-model.js")
+    @Html.IncludeVersionedJs("/pages/home-employee.js")
+}
+
+<div id="contentWrap">
+    <div class="filterdata" id="mainselect">
+        <div class="hidden manager-content">
+            Team:
+            <div id="select-team"></div>
+        </div>
+        Project:
+        <div id="select-project"></div>
+        <button id="overview-team" class="overview-mode mode-inactive">My Team</button><button id="overview-mine" class="overview-mode mode-active">Only Mine</button>
+        Start Date:
+        <input id="select-start-date" />
+        End Date:
+        <input id="select-end-date" />
+        <button id="btn-update-data" class="smallbutton">Update</button>
+
+    </div>
+
+    <div class="news">
+        Link Tracker Version 1.08<br />
+        <a id="open-button">
+            Release Notes
+        </a>
+        <div id="window">
+            <div id="release-notes">
+            </div>
+            <center><button id="close-button">Ok</button></center>
+        </div>
+    </div>
+    <div class="sectionbox">
+        <div class="heading-blue">
+            <h5>Needs Outreach<a id="export-needs-outreach" class="pull-right export">Export</a></h5>
+        </div>
+        <div class="content-box">
+            <a id="open-needs-outreach" class="open-link-details">
+                <div id="chrt-needs-outreach"></div>
+            </a>
+        </div>
+    </div>
+    <div class="left-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Links To Activate<a id="exportLinksToActivate" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <a id="open-activate" class="open-link-details">
+                    <div id="chrt-links-to-activate"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="right-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Send To Leadership<a id="exportSendToLeadership" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <a id="open-send-to-leadership" class="open-link-details">
+                    <div id="chrt-send-to-leadership"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="left-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Outreach<a id="exportOutreach" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <a id="open-outreach" class="open-link-details">
+                    <div id="chrt-outreach"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="right-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>In Communication<a id="exportInCommunication" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <a id="open-in-communication" class="open-link-details">
+                    <div id="chrt-in-communication"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="left-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Needs Attention<a id="exportNeedsFollowUp" class="pull-right export">Export</a></h5>
+            </div>
+        </div><div class="clearleft"></div>
+        <div class="content-box">
+            <a id="needs-follow-up-projects" class="mode-active project-weeks-mode">Projects</a><a id="needs-follow-up-weeks" class="project-weeks-mode mode-inactive">Weeks</a>
+            <a id="open-needs-follow-up" class="open-link-details">
+                <div id="chrt-needs-follow-up"></div>
+                <div id="chrt-needs-follow-up-weeks" class="hidden"></div>
+            </a>
+        </div>
+    </div>
+    <div class="right-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Scheduled<a id="exportScheduled" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <a id="open-scheduled" class="open-link-details">
+                    <div id="chrt-scheduled"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="left-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Links<a id="exportLinks" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <a id="open-links" class="open-link-details">
+                    <div id="chrt-links"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Hours<a id="exportHours" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="clearleft"></div>
+            <div class="content-box">
+                <a id="hours-projects" class="mode-active project-activity-mode">Projects</a><a id="hours-activities" class="project-activity-mode mode-inactive">Activities</a>
+                <a id="open-hours" class="">
+                    <div id="chrt-hours-project"></div>
+                    <div id="chrt-hours-activity" class="hidden"></div>
+                </a>
+                <div id="win-hours">
+                    <div id="grd-hours"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+    <div class="left-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Outreach VS In Communication<a id="exportOutreachVsInCommunication" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <a id="open-outreach-vs-in-communication" class="open-outreach-details">
+                    <div id="chrt-outreach-vs-in-communication"></div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-box">
+        <div class="sectionbox">
+            <div class="heading-blue">
+                <h5>Articles<a id="exportArticles" class="pull-right export">Export</a></h5>
+            </div>
+            <div class="content-box">
+                <div id="grd-article"></div>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;"></div>
+
+    <div id="win-link-details">
+        <div id="grd-needs-outreach" class="link-details hidden-grid"></div> 
+        <div id="grd-links-to-activate" class="link-details hidden-grid"></div>
+        <div id="grd-send-to-leadership" class="link-details hidden-grid"></div>
+        <div id="grd-needs-follow-up" class="link-details hidden-grid"></div>
+        <div id="grd-scheduled" class="link-details hidden-grid"></div>
+        <div id="grd-links" class="link-details hidden-grid"></div>
+        <div id="grd-outreach" class="link-details hidden-grid"></div>
+        <div id="grd-in-communication" class="link-details hidden-grid"></div>
+
+        <table id="link-details">
+            <tr>
+                <td>Project:</td>
+                <td><input id="link-project" /></td>
+                <td>Target Url:</td>
+                <td><input id="link-target-url" /></td>
+                <td>Root Url:</td>
+                <td><input id="link-root-url" /></td>
+            </tr>
+            <tr>
+                <td>Target Strategy:</td>
+                <td><input id="link-strategy" /></td>
+                <td>Root Method:</td>
+                <td><input id="link-root-method" /></td>
+                <td>Target Status:</td>
+                <td><input id="link-status" /></td>
+            </tr>
+            <tr>
+                <td>Article:</td>
+                <td><input id="link-article" /></td>
+                <td>Found By:</td>
+                <td><input id="link-found-by" /></td>
+                <td>Date Found:</td>
+                <td><input id="link-date-found" /></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input id="link-contact-email" /></td>
+                <td>Web Submission:</td>
+                <td><input id="link-contact-url" /></td>
+                <td>Phone Number:</td>
+                <td><input id="link-contact-phone" /></td>
+            </tr>
+            <tr>
+                <td>Domain Authority:</td>
+                <td><input id="link-domain-authority" /></td>
+                <td>Page Relevance:</td>
+                <td><input id="link-page-relevance" /></td>
+                <td>Site Relevance:</td>
+                <td><input id="link-site-relevance" /></td>
+            </tr>
+            <tr>
+                <td>Anchor Text:</td>
+                <td><input id="link-anchor-text" /></td>
+                <td>Landing Page:</td>
+                <td><input id="link-landing-page" /></td>
+                <td>Acquired By:</td>
+                <td><input id="link-acquired-by" /></td>
+            </tr>
+            <tr>
+                <td>Published Url:</td>
+                <td><input id="link-published-url" /></td>
+                <td>Link Type:</td>
+                <td><input id="link-type" /></td>
+                <td>Location:</td>
+                <td><input id="link-location" /></td>
+            </tr>
+            <tr>
+                <td>Date Published:</td>
+                <td><input id="link-date-published" /></td>
+            </tr>
+            <tr>
+                <td>Notes:</td>
+                <td colspan="6"><textarea id="link-notes"></textarea></td>
+            </tr>
+        </table>
+        <center><button id="close-link-details">Close</button></center>
+    </div>
+
+    <div id="win-outreach-details">
+
+        <div id="grd-outreach-vs-in-communication"></div>
+
+    </div>
+</div>

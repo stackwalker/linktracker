@@ -1,0 +1,48 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/admin-employee.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/admin-employee-model.js")
+    @Html.IncludeVersionedJs("/pages/admin-employee.js")
+}
+<div id="contentWrap">
+
+    <div class="sectionbox">
+        <div class="heading-blue">
+            <h5>Users</h5>
+        </div>
+        <div class="content-box">
+            <div id="grdUsers"></div>
+        </div>
+    </div>
+    <div class="sectionbox">
+        <div class="heading-blue">
+            <h5>Teams</h5>
+        </div>
+        <div class="content-box">
+            <div id="grdTeams"></div>
+        </div>
+    </div>
+</div>
+
+<div id="win-new-user">
+    <table id="tbl-new-user" class="formdata">
+        <tr>
+            <td>Username:</td>
+            <td><input id="new-username" /></td>
+            <td>First Name:</td>
+            <td><input id="new-first-name" /></td>
+            <td>Last Name:</td>
+            <td><input id="new-last-name" /></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input id="new-email" /></td>
+            <td>Team:</td>
+            <td><input id="select-new-team" /></td>
+        </tr>
+
+    </table>
+    <button id="btn-save-employee" class="smallbutton">Save Employee</button>
+</div>

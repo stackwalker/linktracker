@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/bundles/kendocss")
+    @Styles.Render("~/bundles/themecss")
+    @Html.IncludeVersionedCss("/p1p.css")
+    
+    @RenderSection("pagecss", false)
+    @Scripts.Render("~/bundles/kendo")
+@*    @Scripts.Render("~/bundles/template")*@
+    @Html.IncludeVersionedJs("/lib/p1p.js")
+    @Html.IncludeVersionedJs("/lib/sharedcontrols.js")
+    @Html.IncludeVersionedJs("/lib/masterpage.js")
+    @Html.IncludeVersionedJs("/lib/staticdata.js")
+    @Html.IncludeVersionedJs("/lib/localsettings.js")
+    @RenderSection("pagejs", false)
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header class="dark_grey">
+        <!-- Header start -->
+
+        @Html.Partial("_HeaderNavigation")
+        @Html.Partial("_LoginPartial")
+    </header>    
+    <div class="container">        
+        <div class="fixed_container container-shadow">            
+            <div id="content" class="no-sidebar">                
+                <div class="inner_content"> 
+                                       
+                    @RenderBody()
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="p1p-overlay"></div>
+    <div id="p1p-loader">
+        <img src="/Content/img/logo.png" />
+        <img src="/Content/img/P1P.dots.gif" />
+    </div>
+    <div id="p1p-error">
+        <img src="/Content/img/x.png" class="p1p-error-close"/>
+        <img src="/Content/img/error.png" class="p1p-error-image"/>
+        <div id="p1p-error-content"></div>
+        <img src="/Content/img/Logo.small.png"/>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+﻿body {
+}
+
+.formdata {
+    margin-bottom: 15px;
+}
+
+.spacer {
+    margin-right: 10px;
+}
+
+.large {
+    width: 415px;
+}
+
+.strategy-boxes {
+    width: 362px;
+}
+
+.small {
+    width: 250px;
+}
+
+.left-box {
+    width: 550px;
+}
+
+.right-box {
+    width: 550px;
+}
+
+.wide {
+    width: 340px;
+}
+
+.short {
+    width: 450px;
+}
+
+.long {
+    width: 655px;
+}
+
+.temp-height {
+    height: 350px;
+}
+
+.k-tabstrip-items .no-tab {
+    padding-right: 10px;
+}
+
+.sectionbox {
+    margin-bottom: 5px;
+}
+
+.error{
+    color: red;
+}
+
+#grd-custom-landing-page th {
+    background: #6A8E95;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+#grd-custom-landing-page td {
+    padding: 5px;
+    /*border: solid 1px #E5E5E5;*/
+}
+
+#grd-custom-landing-page tr:not(.heading-blue):hover {
+    background: #ce7440;
+    color: white;
+}
+
+.landing-page-row {
+    background: #f5f5f5;
+    /*color: white;*/
+}
+
+    .landing-page-row td {
+        border: solid 1px #E5E5E5;
+    }
+
+.selected-row {
+    background: #CFCECE;
+    color: white;
+}
+
+.keyword-row td:not(.empty-cell) {
+    border: solid 1px #E5E5E5;
+}
+
+.selected-keyword td:not(.empty-cell) {
+    background: #CFCECE;
+}
+
+input {
+    border: solid 1px #E5E5E5;
+}
+
+/*.preview-img {
+    width: 50%;
+    height: 50%;
+}*/
+

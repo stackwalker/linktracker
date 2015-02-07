@@ -1,0 +1,270 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/production-linkbuilding.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/production-linkbuilding-model.js")
+    @Html.IncludeVersionedJs("/pages/production-linkbuilding.js")
+}
+
+
+
+<div id="contentWrap">
+    <div id="targetContainer">
+        <div id="target-form" class="sectionbox">
+            <div class="heading-blue">
+                <h5>Target Information</h5>
+            </div>
+            <div class="content-box">
+            <table id="tblTarget" class="tbl-link-building">
+                <tr>
+                    <td colspan="4">
+                        <button id="mode-research" class="link-building-mode mode-active">Research</button><button id="mode-writer" class="link-building-mode mode-inactive">Writer</button>
+                        <button id="btn-request-active" class="btn-disabled btn-spacer" >Request Active</button>
+                        <button id="btn-search-window" class="smallbutton btn-spacer">Search Links</button>
+                        <button id="btn-proven-winners" class="smallbutton btn-spacer">Proven Winners</button>
+                        <button id="btn-new-link" class="smallbutton btn-spacer">New Target</button>
+                        <button id="btn-new-article" class="smallbutton btn-spacer">New Article</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Select Project:</td>
+                    <td>
+                        <input id="link-project" />
+                    </td>
+                    <td>Target Url:</td>
+                    <td>
+                        <input id="link-target-url" disabled />
+                    </td>
+                    <td>Root Url:<label id="vld-root-url-duplicate" class="failed hidden">Duplicate!</label></td>
+                    <td>
+                        <input id="link-root-url" disabled />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Target Strategy:</td>
+                    <td><input id="link-strategy" /></td>
+                    <td>Root Method:</td>
+                    <td>
+                        <input id="link-root-method" class="clearField " />
+                    </td>
+                    <td>Target Status:</td>
+                    <td>
+                        <input id="link-status" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Article:</td>
+                    <td><input id="link-article" /></td>
+                    <td>Found By:</td>
+                    <td>
+                        <input class="clearField " id="link-found-by" />
+                    </td>
+                    <td>Date Found:</td>
+                    <td>
+                        <input id="link-date-found" class="clearDate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>
+                        <input id="link-contact-email" />
+                    </td>
+                    <td>Web Submission</td>
+                    <td>
+                        <input id="link-contact-url" />
+                    </td>
+                    <td>Phone Number:</td>
+                    <td>
+                        <input id="link-contact-phone" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Domain Authority:</td>
+                    <td>
+                        <input id="link-domain-authority" />
+                    </td>
+                    <td>Site Relevance:</td>
+                    <td>
+                        <input id="link-site-relevance" />
+                    </td>
+                    <td>Page Relevance:</td>
+                    <td>
+                        <input id="link-page-relevance" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Anchor Text:</td>
+                    <td>
+                        <input id="link-anchor-text" class="clearField " />
+                    </td>
+                    <td>Landing Page:</td>
+                    <td>
+                        <input id="link-landing-page" class="clearField " />
+                    </td>
+                    <td>Acquired By</td>
+                    <td>
+                        <input id="link-acquired-by" class="clearField " />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Published Url:</td>
+                    <td>
+                        <input id="link-published-url" class="clearField " />
+                    </td>
+                    <td>Link Type:</td>
+                    <td>
+                        <div>
+                            <input id="link-type" />
+                        </div>
+                    </td>
+                    <td>Location:</td>
+                    <td>
+                        <input id="link-location" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date Published:</td>
+                    <td>
+                        <input id="link-date-published" class="clearDate" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Notes:</td>
+                    <td colspan="6">
+                        <div class="field">
+                            <textarea id="link-notes" class="clearField"></textarea>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <button id="btn-save-link" class="smallbutton">Save Target</button>
+                        <button id="btn-update-link" class="smallbutton hidden">Update Target</button>
+                    </td>
+                    <td>
+                        <label id="vld-no-proj" class="failed message hidden">You must select a project.</label>
+                        <label id="vld-no-target-url" class="failed message hidden">You must input a target URL.</label>
+                        <label id="vld-no-root-url" class="failed message hidden">You must input a root URL.</label>
+                        <label id="vld-no-strategy" class="failed message hidden">You must select a strategy.</label>
+                        <label id="vld-no-root-method" class="failed message hidden">You must input a root method.</label>
+                        <label id="vld-no-status" class="failed message hidden">You must select a status.</label>
+                        <label id="vld-no-found-by" class="failed message hidden">You must select a username for Found By.</label>
+                        <label id="vld-no-date-found" class="failed message hidden">You must select the date found.</label>
+                        <label id="vld-no-anchor-text" class="failed message hidden">You must enter the anchor text.</label>
+                        <label id="vld-no-landing-page" class="failed message hidden">You must enter a landing page.</label>
+                        <label id="vld-no-acquired-by" class="failed message hidden">You must select a username for Acquired By.</label>
+                        <label id="vld-no-published-url" class="failed message hidden">You must enter a published Url.</label>
+                        <label id="vld-no-link-type" class="failed message hidden">You must select a link type.</label>
+                        <label id="vld-no-link-location" class="failed message hidden">You must select a link location.</label>
+                        <label id="cnfm-link-saved" class="confirm message hidden">Target Saved!</label>
+                        <label id="cnfm-link-updated" class="confirm message hidden">Target Updated!</label>
+                        <label id="cnfm-request-activation" class="confirm message hidden">Activation Requested!</label>
+                    </td>
+                </tr>
+            </table>
+                </div>
+        </div>
+
+    </div>
+
+    <div id="outreachContainer">
+        <div id="outreach-form" class="sectionbox">
+            <div class="heading-blue">
+                <h5>Outreach</h5>
+            </div>
+            <div class="content-box">
+                <div class="section-parameters">
+                    <table>
+                        <tr>
+                            <td>Action:</td>
+                            <td><input id="outreach-action" /></td>
+                            <td>Outreach Type:</td>
+                            <td><input id="outreach-type" /></td>
+                            <td>Date Outreached:</td>
+                            <td><input id="outreach-date" /></td>
+                            <td><button id="btn-save-outreach" class="smallbutton">Save Outreach</button></td>
+                            <td><span class="validation-message"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Persona:</td>
+                            <td><input id="outreach-persona" /></td>
+                            <td>Attach Article:</td>
+                            <td><input id="outreach-article" /></td>
+                        </tr>
+                    </table>                    
+                </div>
+                <table id="email-parameters">
+                    <tr>
+                        <td>To:</td>
+                        <td><input id="outreach-recipient" /></td>
+                    </tr>
+                    <tr>
+                        <td>Subject:</td>
+                        <td><input id="outreach-subject" /></td>
+                    </tr>
+                </table>
+                
+                Email Body:
+                <textarea id="outreach-email" style="height: 300px"></textarea>
+                <br/>
+                Notes:
+
+                <div class="field">
+                    <textarea id="outreach-notes" class="clear-field long-input"></textarea>
+                </div>
+                <br/>
+                <div id="grd-outreach"></div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<div id="win-search-links">
+    <div id="search-links-content" class="sectionbox">
+        <div class="heading-blue">
+            <h5>Search Links</h5>
+        </div>
+        <table id="tbl-search-links" class="tbl-link-building">
+            <tr>
+                <td>Status:</td>
+                <td><input id="search-links-status" /></td>
+                <td>Project:</td>
+                <td><input id="search-links-project" /></td>
+                <td>Category:</td>
+                <td><input id="search-links-category" /></td>
+                <td><button id="search-links-mine" class="link-search-mode mode-active">Mine</button><button id="search-links-everyone" class="link-search-mode mode-inactive">Everyone</button></td>
+                <td>Target Strategy:</td>
+                <td><input id="search-links-strategy" /></td>
+                <td>Start Date:</td>
+                <td><input id="search-links-start-date" /></td>
+                <td>End Date:</td>
+                <td><input id="search-links-end-date" /></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <button id="btn-search-links" class="smallbutton">Search</button>
+                    <button id="btn-clear-filters" class="smallbutton btn-spacer">Clear Filters</button>
+                    <button id="btn-open-link" class="smallbutton btn-spacer">Open Link</button>
+                    <button id="btn-copy-link" class="smallbutton btn-spacer">Copy Link</button>
+                    <button id="btn-reuse-link" class="smallbutton btn-spacer">Reuse Link</button>
+                </td>
+            </tr>
+        </table>
+        <div id="grd-search-links"></div>
+    </div>
+</div>
+
+
+<div id="win-new-article">
+    Enter New Article Title: <input id="new-article-title" />
+    <a id="btn-save-article" class="smallbutton">Save</a>
+    <label id="vld-no-article-title" class="message failed hidden">You must enter an article name.</label>
+    <label id="vld-no-article-project" class="message failed hidden">You must select a project.</label>
+</div>

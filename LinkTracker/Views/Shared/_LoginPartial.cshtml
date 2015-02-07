@@ -1,0 +1,22 @@
+﻿
+
+<ul class="header_actions">
+
+@if (Request.IsAuthenticated)
+{
+    @:<li class="headerMenuBtn">
+        
+        @:<a href="/Account/Manage">@User.Identity.Name</a>
+    @:</li>
+    @:<li class="headerMenuBtn">@using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+        }
+        @:<a href="javascript:document.getElementById('logoutForm').submit()">
+        @:<i class="icon-signout"></i><span class="hidden-768 hidden-480">Logout</span></a>
+      @:</li>
+}
+else
+{
+    @:<li class="headerMenuBtn"><a href="/Account/Login"><i class="icon-signin"></i>Login</a>
+}
+</ul>

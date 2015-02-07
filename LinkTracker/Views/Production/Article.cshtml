@@ -1,0 +1,66 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/production-article.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/production-article-model.js")
+    @Html.IncludeVersionedJs("/pages/production-article.js")
+}
+<div id="contentWrap">
+    <div class="sectionbox">
+        <div class="content-box">
+            <h4>Find Articles</h4>
+            <table id="tbl-article-search">
+                <tr>
+                    <td>Project:</td>
+                    <td><input id="article-search-project" class="projectlist" /></td>
+                    <td><input id="chkOnlyMine" type="checkbox" class="inputmargin" />Only Mine</td>
+                    <td><input id="chkIncludePublished" type="checkbox" class="inputmargin" />Include Published</td>
+                    <td><button id="btn-search" class="smallbutton inputmargin">Search</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label id="noArticleSelectedForDelete" class="projectClearField message hidden failed">You must have an article selected to delete.</label>
+                        <label id="vld-article-published" class="projectClearField message hidden failed">You cannot delete a published article.</label>
+                        <label id="deleteArticleConfirmation" class="projectClearField message hidden confirm">Article Deleted!</label>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="sectionbox">
+        <div class="heading-blue">
+            <h5>Article Results</h5>
+        </div>
+        <div class="content-box">
+            <div id="grd-articles"></div>
+        </div>
+    </div>
+    <div class="sectionbox">
+        <div class="content-box">
+            <h4>Article Editor</h4>
+            <div id="articleparameters" class="formdata">
+                <table>
+                    <tr>
+                        <td>
+                            <input id="article-project" class="projectlist" />
+                        </td>
+                        <td>
+                            <input id="article-status" />
+                        </td>
+                        <td>
+                            <span class="whitelabel">Article Title:</span>&nbsp; <input id="article-title" />
+                        </td>
+                        <td><button id="btn-new-article" class="smallbutton">New Article</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <textarea id="article-content" style="height: 400px"></textarea>
+    <button id="btn-save-article" class="smallbutton">Save</button>
+    <label id="vld-no-project" class="failed message hidden">You must select a project.</label>
+    <label id="vld-no-status" class="failed message hidden">You must select a status.</label>
+    <label id="vld-no-title" class="failed message hidden">You must enter a title.</label>
+    <label id="cnfm-article-saved" class="confirm message hidden">Article Saved!</label>
+</div>

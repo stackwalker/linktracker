@@ -1,0 +1,45 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/production-keywordresearch.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/production-keywordresearch-model.js")
+    @Html.IncludeVersionedJs("/pages/production-keywordresearch.js")
+}
+<div id="contentWrap">
+    <h3>Keyword Research</h3>
+    <div class="formdata" id="mainselect">
+        <table>
+            <tr>
+                <td>Client:</td>
+                <td>
+                    <select id="selectClient"></select></td>
+                <td>Project Url:</td>
+                <td>
+                    <select id="selectUrl"></select></td>
+            </tr>
+        </table>
+    </div>
+    <div id="keywordTasks" class="sectionbox">
+        <h4>Task Status</h4>
+        <table id="tblKeywordTasks">
+            <tr>
+                <th>Task Name</th>
+                <th>Description</th>
+                <th>Progress</th>
+            </tr>
+        </table>
+    </div>
+    <div id="keywordEntry" class="sectionbox">
+        <h4>Keywords</h4>
+        <div id="keywordconcepts">
+
+        </div>
+    </div>
+    <div id="competitivelandscape" class="sectionbox">
+        <h4>Competitive Landscape</h4>
+        <div id="keywordcompetitors">
+
+        </div>
+    </div>
+</div>

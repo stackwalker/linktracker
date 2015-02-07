@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADBA4EB8-EB35-4685-8141-C11ABE0A979C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>p1p.Data</RootNamespace>
+    <AssemblyName>p1p.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.2\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Article.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleStatus.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BillingCycle.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Customer.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\ArticleDAO.cs" />
+    <Compile Include="DAO\LinkAggregatesByWeekDAO.cs" />
+    <Compile Include="DAO\LinkAggregatesDAO.cs" />
+    <Compile Include="DAO\LinkDAO.cs" />
+    <Compile Include="DAO\OutreachAggregatesByWeekDAO.cs" />
+    <Compile Include="DAO\OutreachDAO.cs" />
+    <Compile Include="DAO\TimeAggregatesDAO.cs" />
+    <Compile Include="DAO\TimeEntryDAO.cs" />
+    <Compile Include="Employee.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeTeamXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Keyword.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPage.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LandingPageKeywordXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Link.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinkBuildingMode.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinkLocation.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinkStatus.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinkStrategy.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LinkType.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderCategoryXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderEmployeeXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderTeamXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Outreach.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OutreachAction.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OutreachType.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="P1PContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>P1PContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="P1PContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="P1PContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>P1PContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Persona.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PersonaSocialAccountXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Project.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectArticleXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectKeywordXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectLandingPageXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectPersonaXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectSocialAccountXREF.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityContext.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityContext.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityContext.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SecurityContext.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SecurityContext.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteCategory.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SocialAccount.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Articles_DYNAMIC_SEARCH1_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Articles_DYNAMIC_SEARCH2_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Articles_DYNAMIC_SEARCH_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Articles_DYNAMIC_SEARCH_Result1.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Articles_DYNAMIC_SEARCH_Result2.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Articles_DYNAMIC_SEARCH_Result3.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Hours_Aggregates_By_Activity_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Hours_Aggregates_By_Activity_Result1.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Hours_Aggregates_By_Project_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Hours_Aggregates_By_Project_Result1.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Links_Aggregates_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Links_Aggregates_Result1.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Links_Aggregates_Result2.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Links_DYNAMIC_SEARCH_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Links_DYNAMIC_SEARCH_Result1.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Outreaches_DYNAMIC_SEARCH_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_TimeEntries_DYNAMIC_SEARCH_Result.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Team.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimeEntry.cs">
+      <DependentUpon>P1PContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UserProfile.cs">
+      <DependentUpon>SecurityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_Membership.cs">
+      <DependentUpon>SecurityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_OAuthMembership.cs">
+      <DependentUpon>SecurityContext.tt</DependentUpon>
+    </Compile>
+    <Compile Include="webpages_Roles.cs">
+      <DependentUpon>SecurityContext.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="P1PContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>P1PContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="P1PContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>P1PContext.edmx</DependentUpon>
+      <LastGenOutput>P1PContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="P1PContext.edmx.diagram">
+      <DependentUpon>P1PContext.edmx</DependentUpon>
+    </None>
+    <None Include="P1PContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>P1PContext.edmx</DependentUpon>
+      <LastGenOutput>P1PContext.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <EntityDeploy Include="SecurityContext.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SecurityContext.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SecurityContext.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SecurityContext.edmx</DependentUpon>
+      <LastGenOutput>SecurityContext.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SecurityContext.edmx.diagram">
+      <DependentUpon>SecurityContext.edmx</DependentUpon>
+    </None>
+    <None Include="SecurityContext.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SecurityContext.edmx</DependentUpon>
+      <LastGenOutput>SecurityContext.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\p1p.Types\p1p.Types.csproj">
+      <Project>{a72fa765-5a65-41ee-a340-ea7d16923381}</Project>
+      <Name>p1p.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

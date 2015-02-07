@@ -1,0 +1,140 @@
+﻿@model p1p.Account.LocalPasswordModel
+@{
+    ViewBag.Title = "Manage Account";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section pagecss {
+    @Html.IncludeVersionedCss("/pages/account-manage.css")
+}
+
+@section pagejs{
+    @Html.IncludeVersionedJs("/pages/account-manage-model.js")
+    @Html.IncludeVersionedJs("/pages/account-manage.js")
+}
+
+
+
+
+<div class="container-fluid">
+    <div style="height: 52px"></div>
+    @* User Profile *@
+    <div class="span8" style="margin-left:250px">
+        <div class="well container-shadow">
+            <div class="well-header p1p-sage">
+                <h4>
+                    <i class="icon-user"></i>
+                    Edit user profile
+                </h4>
+            </div>
+            <div class="well-content">
+
+                <div class="tab-content padding tab-content-inline tab-content-bottom">
+                    <div class="tab-pane active" id="profile">
+                        <form action="#" class="form-horizontal">
+                            <div class="row-fluid">
+                                <div class="span10 pull-right">
+                                    <div class="control-group clientInfo">
+                                        <label for="profile-business-name" class="control-label right">Business Name:</label>
+                                        <div class="controls">
+                                            <input type="text" name="profile-business-name" class="input-xlarge" id="profile-business-name">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="profile-first-name" class="control-label right">First Name:</label>
+                                        <div class="controls">
+                                            <input type="text" name="profile-first-name" class="input-xlarge" id="profile-first-name">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="profile-last-name" class="control-label right">Last Name:</label>
+                                        <div class="controls">
+                                            <input type="text" name="profile-last-name" class="input-xlarge" id="profile-last-name">
+                                        </div>
+                                    </div>
+                                    <div class="control-group clientInfo">
+                                        <label for="website" class="control-label right">Website:</label>
+                                        <div class="controls">
+                                            <input type="text" name="website" class="input-xlarge" id="website">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="email" class="control-label right">Email:</label>
+                                        <div class="controls">
+                                            <input type="text" name="email" class="input-xlarge" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="control-group clientInfo">
+                                        <label for="phone" class="control-label right">Phone Number:</label>
+                                        <div class="controls">
+                                            <input type="text" name="phone" class="input-xlarge" id="phone">
+                                        </div>
+                                    </div>
+                                    <div class="control-group clientInfo">
+                                        <label for="profile-street-address" class="control-label right">Street Address:</label>
+                                        <div class="controls">
+                                            <input type="text" name="profile-street-address" class="input-xlarge" id="profile-street-address">
+                                        </div>
+                                    </div>
+                                    <div class="control-group clientInfo">
+                                        <label for="profile-city" class="control-label right">City:</label>
+                                        <div class="controls">
+                                            <input type="text" name="profile-city" class="input-xlarge" id="profile-city">
+                                        </div>
+                                    </div>
+                                    <div class="control-group clientInfo">
+                                        <label for="profile-state" class="control-label right">State:</label>
+                                        <div class="controls">
+                                            <input type="text" name="profile-state" class="input-xlarge" id="profile-state">
+                                        </div>
+                                    </div>
+                                    <div class="control-group clientInfo">
+                                        <label for="profile-zip" class="control-label right">Zip Code:</label>
+                                        <div class="controls">
+                                            <input type="text" name="profile-zip" class="input-xlarge" id="profile-zip">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label right message confirm" id="changesSavedConfirmation">Changes Saved!</label>
+                                        <div class="controls">
+                                            <a href="#" id="saveProfileChanges" class="btn p1p-sage btn-block">Save</a>
+                                            <input type="reset" class="btn p1p-sage btn-block" id="resetProfile">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="pw" class="control-label right">Password:</label>
+                                        <div class="controls">
+                                            <input type="password" name="pw" id="pw" class="input-xlarge">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="newPW" class="control-label right">New Password:</label>
+                                        <div class="controls">
+                                            <input type="password" name="newPw" id="newPw" class="input-xlarge">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="confirmNewPw" class="control-label right">Confirm New Password:</label>
+                                        <div class="controls">
+                                            <input type="password" name="confirmNewPw" id="confirmNewPw" class="input-xlarge">
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label right message confirm" id="pwSavedConfirmation">New Password Saved!</label>
+                                        <label class="control-label right message failed" id="pwNotSavedConfirmation">Password Change Failed.</label>
+                                        <label class="control-label right message failed" id="pwNotMatch">New password must match.</label>
+                                        <label class="control-label right message failed" id="noPw">You must enter your password.</label>
+                                        <label class="control-label right message failed" id="pqNotLong">Your password must be at least 6 characters.</label>
+                                        <div class="controls">
+                                            <a href="#" id="savePassword" class="btn p1p-sage btn-block">Change Password</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

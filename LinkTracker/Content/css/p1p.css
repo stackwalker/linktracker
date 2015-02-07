@@ -1,0 +1,680 @@
+﻿/*CSS Legend
+    1. General Formatting
+    2. Styling for messages
+    3. p1p Colors
+    4. grid boxes
+    5. Button CSS
+    6. Header Nav CSS
+    7. TabStrip CSS
+    8. login and forgot password display
+    9. Targetting Webkit browsers
+*/
+
+
+/* 1. General Formatting */
+body {
+    background: url(/Content/img/lt-bg.png);
+}
+
+#content {
+    margin: 44px 0 16px 0;
+    border-left: 1px solid #c5c5c5;
+    border-right: 1px solid #c5c5c5;
+}
+
+#content .inner_content .statistic {
+    border-top: none;
+}
+
+#p1p-overlay{	
+	position: fixed;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+.working #p1p-overlay{
+    left: 0;
+    z-index: 20000;
+    opacity: 0.5;
+    -webkit-transition: opacity .15s linear;        
+    transition: opacity .15s linear;
+}
+#p1p-loader{ 
+    left: -9999px;   
+    padding: 120px 0 0 0;
+    text-align: center;
+    position: fixed;
+	background: #000;
+	width: 320px;
+    height: 200px;
+    opacity: 0.0;
+    z-index: 20001;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+.working #p1p-loader{
+    margin: -150px 0 0 -160px;
+    top: 50%;
+    left: 50%;
+    z-index: 20000;
+    opacity: 0.8;
+    -webkit-transition: opacity .15s linear;        
+    transition: opacity .15s linear;
+}
+
+#p1p-error{
+    left: -9999px;       
+    text-align: center;
+    position: fixed;
+	background: #000;
+	width: 320px;
+    height: 320px;
+    opacity: 0.0;
+    z-index: 20001;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+.error #p1p-error{
+    margin: -150px 0 0 -160px;
+    top: 50%;
+    left: 50%;
+    z-index: 20000;
+    opacity: 0.8;
+    -webkit-transition: opacity .15s linear;        
+    transition: opacity .15s linear;
+}
+
+.p1p-error-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.p1p-error-image{
+    margin: 30px 0 0 0;
+}
+#p1p-error-content{
+    color: #fff;
+    font-size: 0.8em;
+    height: 100px;
+    padding: 0 20px 0 20px;
+    overflow: hidden;
+    line-height: 1.4;
+}
+.inner_content {
+    background: #fafafa;
+    padding-bottom: 1px;
+}
+
+.well-margin {
+    margin: 20px;
+}
+
+.well {
+    margin-bottom: 10px
+}
+
+div.well-header h4 {
+    padding: 7px;
+    color: white;
+    font-weight: 500;
+}
+
+.innerHeaderSpacer, .longInput, .long-input {
+    width: 100%;
+}
+
+.container-shadow {
+    box-shadow: 2px 5px 20px -4px #bbb;
+}
+
+/*.container {
+    width: 1170px;
+}*/
+
+/* fixes the problem with the dropdown height and the lower border disappearing */
+.k-textbox>input, .k-autocomplete .k-input, .k-picker-wrap .k-input, .k-numeric-wrap .k-input, .k-dropdown-wrap .k-input, .k-selectbox .k-input {
+	height: 1.7em;
+	line-height: 1.3em;
+}
+
+/* centers the icons on the dropdowns and calendars */
+.k-picker-wrap .k-select, .k-numeric-wrap .k-select, .k-dropdown-wrap .k-select {
+	min-height: 1.2em;
+	line-height: 1.5em;
+}
+
+/* makes the input boxes smaller to match the size of the dropdowns (input elements must have the class k-textbox) */
+input.k-textbox {
+	height: 1.8em;
+	line-height: 1.5em;
+}
+
+#contentWrap {
+    padding: 15px 10px 10px 10px;
+}
+
+.window-overlay {
+    display: none;
+    width: 1000px;
+}
+
+.formdata input, textarea { 
+	padding: 9px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100%;
+	width: 200px;
+	background: #FFFFFF;
+	}
+
+/*textarea { 
+	width: 400px;
+	max-width: 400px;
+	height: 150px;
+	line-height: 150%;
+	}*/
+
+.formdata input:hover, .formdata textarea:hover, .formdata select:hover,
+.formdata input:focus, .formdata textarea:focus, .formdata select:focus { 
+	border-color: #C9C9C9; 
+	}
+
+.form label { 
+	margin-left: 10px; 
+	color: #999999; 
+	}
+
+.submit input {
+	width: auto;
+	padding: 9px 15px;
+	background: #617798;
+	border: 0;
+	font-size: 14px;
+	color: #FFFFFF;
+	}
+
+.formdata select {
+    padding:3px;
+    margin: 0;
+    background: #ffffff;
+    color:#888;
+    /*border:none;*/
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    /*appearance:none;*/
+    cursor:pointer;
+}
+/* end general formatting */
+
+/* 2. Styling for messages */
+.message {
+    margin-left: 5px;
+}
+
+.confirm {
+    color: #31B404;
+}
+
+.failed {
+    color: #FF0000;
+}
+
+/* 3. p1p Colors */
+.p1p-gold {
+    background: #fbad17;
+}
+
+.p1p-brown {
+    background: #ce7440;
+}
+
+.p1p-sage {
+    background: #b0c3c7;
+}
+
+.sage-green {
+    background: #B9C8B1;
+}
+
+.sage-brown {
+    background: #95716A;
+}
+
+.sage-tan {
+    background: #C4B397;
+}
+
+.sage-teal {
+    background: #6A8E95;
+}
+
+.sage-purple {
+    background: #C0B1C8;
+}
+
+.brown-tan {
+    background: #E0A685;
+}
+
+.brown-blue {
+    background: #71B4DA;
+}
+
+.brown-red {
+    background: #E3929C;
+}
+
+.brown-yellow {
+    background: #d4b266;
+}
+
+.brown-dk-blue {
+    background: #034769;
+}
+
+.brown-brown {
+    background: #bf6f30;
+}
+
+.brown-grey {
+    background: #999999;
+}
+
+.brown-lt-blue {
+    background: #92bec1;
+}
+
+.brown-blue-green {
+    background: #356269;
+}
+
+.gold-blue {
+    background: #90B7FD;
+}
+
+.gold-dk-blue {
+    background: #3F5666;
+}
+
+.gold-red {
+    background: #EA5441;
+}
+
+.gold-slate {
+    background: #5B605F;
+}
+
+.gold-green {
+    background: #576659;
+}
+
+.gold-brown {
+    background: #736861;
+}
+/*End P1p Colors*/
+
+/* 4. grid boxes */
+.sectionbox {
+    margin: 15px 0 0 0;
+    border: solid 1px #E5E5E5;
+}
+
+.section-parameters{
+    margin: 5px 0 10px 0;
+}
+
+.section-parameters .k-widget{
+    margin: 0 10px 0 0;
+}
+
+.left-box {
+    float: left;
+    width: 566px;
+}
+
+.right-box {
+    float: right;
+    width: 566px;
+}
+
+.heading-orange {
+    background: #ce7440;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 5px;
+    text-align: left;
+}
+
+.heading-brown {
+    background: #95716A;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 5px;
+    text-align: left;
+}
+
+.heading-blue {
+    background: #6A8E95;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+}
+
+.content-box {
+    padding: 10px;
+}
+/*end grid boxes*/
+
+/* 5. Button CSS */
+/*mode change buttons*/
+.link-building-mode, .overview-mode, .link-search-mode, .project-active-mode {
+    border-style: solid;
+    border-width: 1px;
+    border-color: gray;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    padding: 3px 10px;
+    display: inline-block;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.mode-inactive {
+    background: white;
+    color: gray;
+}
+
+.mode-inactive:hover {
+    color: gray;
+}
+
+.mode-active {
+    background: #6A8E95;
+    color: white;
+}
+
+.mode-active:hover {
+    color:white;
+}
+/*end mode change buttons*/
+
+.btn-disabled {
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 110%;
+    color: #FFF;
+    background: #999999;
+    padding: 3px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 2px;
+    margin: 10px 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 0;
+}
+
+.btn-disabled:hover {
+    color: #FFF;
+}
+
+.smallbutton {
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 110%;
+    color: #FFF;
+    background: #6A8E95;
+    padding: 3px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 2px;
+    margin: 10px 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 0;
+}
+
+    .smallbutton:hover {
+        background: #ce7440;
+        color: #FFF;
+        cursor: pointer;
+    }
+
+.smallbutton-brown {
+    text-align: center;
+    text-decoration: none;
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 110%;
+    color: #FFF;
+    background: #ce7440;
+    padding: 3px 10px;
+    display: inline-block;
+    white-space: nowrap;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 2px;
+    margin: 10px 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    border: 0;
+}
+
+    .smallbutton-brown:hover {
+        background: #ae5c2d;
+        color: #FFF;
+        cursor: pointer;
+    }
+
+.bg-blue {
+    background: #6A8E95;
+}
+.bg-brown {
+    background: #95716A;
+}
+.bg-orange {
+    background: #ce7440;
+}
+.bg-grey {
+    background: #999999;
+}
+/*end button css*/
+
+/* 6. Header Nav CSS */
+#headerMenu {
+    height: 43px;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    background-color: #1f1f1f;
+}
+
+    #headerMenu li {
+        height: 44px;
+        background-color: #1f1f1f;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
+    #headerMenu .k-link {
+        line-height: 2.8em;
+        height: 35px;
+        color: white;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #headerMenu .logo_image {
+        padding-right: 0px;
+    }
+
+    #headerMenu .headerDropDown {
+        width: initial;
+    }
+
+    #headerMenu .k-state-active {
+        background-color: #1f1f1f;
+        border-left: 0px;
+    }
+
+    #headerMenu .k-state-hover:hover {
+        zoom: 0;
+        background-image: none;
+    }
+
+    #headerMenu .k-state-border-down {
+        background-color: rgb(51, 50, 50);
+    }
+
+.menuDropDown {
+    border-top: 1px solid rgb(60, 58, 58);
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+    .headerMenuBtn:hover {
+        background-color: rgb(51, 50, 50);
+    }
+
+    #headerMenu.k-menu .k-group.k-popup,
+#headerMenu.k-menu .k-animation-container{
+    width: 100% !important;
+    padding: 0 !important;
+}
+             
+#headerMenu.k-menu .k-animation-container {
+    margin-left: 0 !important;
+}
+/*end header nav css*/
+
+/*  7. Start tapstrip css   */
+
+div#tabstrip li.k-item.k-state-default.k-state-hover {
+   background-color:grey !important;
+}
+
+div#tabstrip li.k-item.k-state-default.k-tab-on-top.k-state-active .k-link {
+    background-color: #6A8E95 !important;
+    color: #fff;
+}
+
+div#tabstrip li.k-item.k-state-default {
+    color: #000000 !important;
+}
+
+.k-state-active, .k-state-active:hover, .k-active-filter, .k-tabstrip .k-state-active {
+    border-color: #6A8E95;
+}
+/*   End tabstip css   */
+
+/* 8. login and forgot password display */
+
+.login-container{
+    background: #000000;
+    opacity: .80;
+}
+
+button{
+    opacity: 1;
+}
+
+.heading-login {
+    margin: 10px 0 10px 0;
+    text-align: center;
+}
+
+.wide {
+    width: 100%;
+    height: 40px;
+}
+
+.checkbox {
+    color: #fff;
+}
+
+.forgot-password a {
+    color: #fff;
+}
+
+/* end login and forgot password display */
+
+/* 9. Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+.formdata label {position:relative}
+.formdata label:after {
+    content:'>';
+    font:18px "Consolas", monospace;
+    color:#ffffff;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+.formdata label:before {
+    content:'';
+    right:0px; top:0px;
+    width:30px; height:30px;
+    background:#6A8E95;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}
+
+.formdata td {
+    padding: 5px;
+}
+
+
+/*KendoGrid Loading*/
+.p1p-grid-loading-image {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-image: url('/Content/img/orange_spinner.gif');
+    z-index: 2;
+}

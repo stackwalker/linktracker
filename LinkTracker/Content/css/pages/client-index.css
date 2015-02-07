@@ -1,0 +1,257 @@
+﻿#dash-header-info {
+    float: left;
+    padding-left: 80px;
+    width: 630px;
+}
+
+.right-header {
+    float: left;
+    width: 130px;
+    margin-left: 30px;
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.k-datepicker, .k-combobox {
+    width: 200px;
+}
+
+#dash-header {
+    min-width: 400px;
+    background: #fff;
+}
+
+.dash-header-label {
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.client-select {
+    margin-bottom: 5px;
+}
+
+#header-selects {
+    float: left;
+    width: 100px;
+
+}
+
+.well-expand {
+    color: #fff;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+
+.well-expand i {
+    margin-right: 5px;
+}
+
+.well-expand-content {
+    display: none;
+    background: #fff;
+}
+
+.icon-blank {
+    padding-left: 30px;
+}
+
+.margin_b10 {
+    margin-bottom: 15px;
+}
+
+.more {
+    transition: all .5s ease-in; 
+}
+
+.widget div.more {
+    padding: 3px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.widget div.more i {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 5px;
+}
+
+div.more.slideLeft {
+    width: 100%;
+    background: rgba(222, 222, 222, 1);
+}
+
+.widget div.more.slideLeft:hover {
+    background: rgba(222, 222, 222, 1);
+}
+
+.widget .more i.icon-question-sign {
+    color: white;
+    cursor: pointer;
+}
+
+.icon-bar-chart {
+    cursor: pointer;
+}
+
+.chartArea {
+    height: 200px;
+    border: 1px solid #ddd;
+}
+
+.pieChart {
+    margin: 0 100px;
+}
+
+.widget .more i.icon-warning-sign {
+    color: yellow;
+}
+
+.widget .more i.icon-exclamation-sign {
+    color: red;
+}
+
+.widget .more i.icon-info-sign {
+    color: blue;
+}
+
+
+/* Start hours widgets */
+
+.hours-widgets {
+  padding: 10px 20px;
+}
+
+.hours-widgets .widget {
+  position: relative;
+  padding: 15px 45px 17px 15px;
+}
+
+.hours-widgets .widget .content {
+  text-align: center;
+}
+
+.hours-widgets .widget .content .icon {
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 8px;
+  position: relative;
+  top: -2px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.hours-widgets .widget .content .value {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.hours-widgets .widget .content .icon i {
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+/* End hours widgets */
+
+/* Start outreach widgets */
+
+.outreach-widgets {
+  padding: 10px 20px;
+}
+
+.outreach-widgets .widget {
+  position: relative;
+  padding: 15px 45px 17px 15px;
+}
+
+.outreach-widgets .widget .content {
+  text-align: center;
+}
+
+.outreach-widgets .widget .content .icon {
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 8px;
+  position: relative;
+  top: -2px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.outreach-widgets .widget .content .value {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.outreach-widgets .widget .content .icon i {
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+/* End outreach widgets */
+
+/* Start links widgets */
+
+.links-widgets {
+  padding: 10px 20px;
+}
+
+.links-widgets .widget {
+  position: relative;
+  padding: 15px 45px 17px 15px;
+}
+
+.links-widgets .widget .content {
+  text-align: center;
+}
+
+.links-widgets .widget .content .icon {
+  font-size: 13px;
+  color: #fff;
+  margin-bottom: 8px;
+  position: relative;
+  top: -2px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.links-widgets .widget .content .value {
+  font-size: 28px;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.35);
+}
+
+.links-widgets .widget .content .icon i {
+  font-size: 20px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px;
+}
+
+#links-chart div.well-content div.icon {
+    padding-left: 100px;
+}
+
+/* End links widgets */
+
+#hours-chart, #outreach-chart, #links-chart {
+    padding: 10px 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	    -ms-box-sizing: border-box;
+	     -o-box-sizing: border-box;
+            box-sizing: border-box;
+}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+</head>
+<body>
+    <header class="dark_grey"> <!-- Header start -->
+        <a href="#" class="logo_image"><span class="hidden-480">FlatPoint</span></a>
+
+        <ul class="header_actions">
+            
+            <li class="dropdown"><a href="#"><img src="demo/avatar_06.png" alt="User image" class="avatar"> Bernad Delic <i class="icon-angle-down"></i></a>
+                <ul>
+                    <li><a href="#"><i class="icon-cog"></i> User options</a></li>
+                    <li><a href="#"><i class="icon-inbox"></i> Messages</a></li>
+                    <li><a href="#"><i class="icon-user"></i> Friends</a></li>
+                    <li><a href="#"><i class="icon-remove"></i> Logout</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="icon-signout"></i> <span class="hidden-768 hidden-480">Logout</span></a></li>
+            <li class="responsive_menu"><a class="iconic" href="#"><i class="icon-reorder"></i></a></li>
+        </ul>
+    </header>
+
+    <div id="main_navigation" class="dark_navigation"> <!-- Main navigation start -->
+        <div class="inner_navigation">
+            <ul class="main">
+                <li class="clientLink" data-targetid="dashboard"><a href="#Dashboard"><i class="icon-home"></i> Dashboard</a></li>
+                <li class="clientLink" data-targetid="links"><a href="#Links"><i class="icon-link"></i> Links</a></li>
+                <li class="clientLink" data-targetid="hours"><a href="#Hours"><i class="icon-link"></i> Hours</a></li>
+                <li class="clientLink" data-targetid="outreach"><a href="#Outreach"><i class="icon-link"></i> Outreach</a></li>
+                <li class="clientLink" data-targetid="anchortext"><a href="#AnchorText"><i class="icon-link"></i> Anchor Text</a></li>
+             </ul>
+            <div id="clientStats">
+                <div><b>Client:</b><span id="lblClient"></span></div>
+                <div><b>Project:</b><span id="lblProject"></span></div>
+                <div><b>Project Status:</b><span id="lblProjectStatus"></span></div>
+                <div><b>Links Acquired:</b><span id="lblLinksAcquired"></span></div>
+                <div><b>In Communication:</b><span id="lblInCommunication"></span></div>
+                <div><b>Outreach:</b><span id="lblOutreach"></span></div>
+                <div><b>Sites Found:</b><span id="lblSitesFound"></span></div>
+                <div><b>Articles Written:</b><span id="lblArticlesWritten"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="no-sidebar"> <!-- Content start -->
+        <div class="top_bar blue_bg">
+
+        </div>
+    @RenderBody()
+    </div>
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

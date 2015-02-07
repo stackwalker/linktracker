@@ -1,0 +1,205 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/sales-index.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/sales-index-model.js")
+    @Html.IncludeVersionedJs("/pages/sales-index.js")
+}
+<div id="contentWrap">
+    <h3>Select Products</h3>
+
+    <div id="panelContainer">
+        <ul id="panelProducts">
+            <li>On-Page SEO
+                <div>
+                    <div class="productpanel">
+                        <div class="seoproduct">
+                            <div class="chkselectproduct">
+                                <input type="checkbox" id="chkKeywordResearch" /></div>
+                            <div class="producttitle">Keyword Research</div>
+                            <div class="clearboth"></div>
+                            <div class="productdescription">
+                                <h4>Tasks</h4>
+                                <ul class="pull-left">
+                                    <li>Develop Keyword Plans</li>
+                                    <li>Obtain Search Volumes</li>
+                                    <li>Create Page One Results Report</li>                                                                       
+                                </ul>
+                                <ul class="pull-left">
+                                    <li>Gather Current Ranking Values</li>
+                                    <li>Develop Landing Page Plan</li>
+                                </ul>
+                                <div class="clearleft"></div>
+                                <button id="btnConfigureKeywords" class="smallbutton">Configure</button>
+                            </div>
+                        </div>
+                        <div class="seoproduct">
+                            <div class="chkselectproduct">
+                                <input type="checkbox" id="chkLandingPageAudit" /></div>
+                            <div class="producttitle">Landing Page Audit</div>
+                            <div class="clearboth"></div>
+                            <div class="productdescription">
+                                <h4>Tasks</h4>
+                                <ul>
+                                    <li>Landing Page Checklist</li>
+                                    <li>Backlink Reports per Landing Page</li>
+                                </ul>
+                                <button id="btnConfigureLandingPages" class="smallbutton">Configure</button>
+                            </div>
+                        </div>
+                        <div class="seoproduct">
+                            <div class="chkselectproduct">
+                                <input type="checkbox" id="chkSitePlan" /></div>
+                            <div class="producttitle">Site Architecture Plan</div>
+                            <div class="clearboth"></div>
+                            <div class="productdescription">
+                                Site Architecture Plan
+                            </div>
+                        </div>
+                        <div class="seoproduct">
+                            <div class="chkselectproduct">
+                                <input type="checkbox" id="chkSiteAspects" /></div>
+                            <div class="producttitle">Sitewide Aspects</div>
+                            <div class="clearboth"></div>
+                            <div class="productdescription">
+                                Sitewide Aspects
+                            </div>
+                        </div>
+                        <div class="seoproduct">
+                            <div class="chkselectproduct">
+                                <input type="checkbox" id="chkBacklinkPortfolio" /></div>
+                            <div class="producttitle">Backlink Portfolio</div>
+                            <div class="clearboth"></div>
+                            <div class="productdescription">
+                                Backlink Portfolio
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>Link Building                
+                <div class="productpanel">
+                    Stuff for LinkBuilding
+                </div>
+            </li>
+            <li>PPC
+                <div class="productpanel">
+                    Stuff for PPC
+                </div>
+            </li>
+        </ul>
+    </div>
+    <h3>Customer Information</h3>
+    <div id="customercontainer" class="formdata">
+
+        <table id="customerinfo">
+            <tr>
+                <td>Existing Customer:</td>
+                <td>
+                    <button id="btnCustomerSearch" class="smallbutton">Search Customers</button>
+                </td>
+            </tr>
+            <tr>
+                <td>First Name:</td>
+                <td>
+                    <input id="inputFirstName" data-bind="value: FirstName" />
+                </td>
+                <td>Last Name:</td>
+                <td>
+                    <input id="inputLastName" data-bind="value: LastName" />
+                </td>
+            </tr>
+            <tr>
+                <td>Business Name:</td>
+                <td>
+                    <input id="inputBusinessName" data-bind="value: Name" /></td>
+                <td>Phone:</td>
+                <td>
+                    <input id="inputPhone" data-bind="value: Phone" /></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>
+                    <input id="inputAddress" data-bind="value: Address" />
+                </td>
+                <td>City:</td>
+                <td>
+                    <input id="inputCity" data-bind="value: City" />
+                </td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td>
+                    <label>
+                        <select id="selectState" data-bind="value: State">
+                            <option>WI</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <td>Zip:</td>
+                <td>
+                    <input id="inputZip" data-bind="value: Zip" />
+                </td>
+            </tr>
+            <tr>
+                <td>Desired Username:</td>
+                <td>
+                    <input id="inputUserName" data-bind="value: UserName" class="newuser"/></td>
+
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>
+                    <input id="inputEmail" data-bind="value: Email" class="newuser"/></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td>
+                    <input type="password" id="inputPassword" data-bind="value: Password" class="newuser"/></td>
+
+            </tr>
+            <tr>
+                <td>Verify Password:</td>
+                <td>
+                    <input type="password" id="inputVerifyPassword" class="newuser"/></td>
+            </tr>
+        </table>
+
+    </div>
+    <button id="btnOrder" class="bigbutton">Place Order</button>
+</div>
+<div id="keywordResearchWindow" class="window-overlay">
+    <div id="grdKeywords"></div>
+    <button id="btnKeywordsOk" class="smallbutton">OK</button>
+</div>
+<div id="landingPageWindow" class="window-overlay">
+    <div id="grdLandingPages"></div>
+    <button id="btnLandingPagesOk" class="smallbutton">OK</button>
+</div>
+<div id="customerSearchWindow" class="window-overlay formdata">
+    <table>
+        <tr>
+            <td>Business Name:</td>
+            <td>
+                <input id="filterBusinessName" /></td>
+            <td>Email:</td>
+            <td>
+                <input id="filterEmail" /></td>
+        </tr>
+        <tr>
+            <td>First Name:</td>
+            <td>
+                <input id="filterFirstName" /></td>
+            <td>Last Name:</td>
+            <td>
+                <input id="filterLastName" /></td>
+        </tr>
+    </table>
+    <button id="btnSearchCustomers" class="smallbutton">Search</button>
+    <br />
+    <div id="grdCustomers"></div>
+    
+</div>

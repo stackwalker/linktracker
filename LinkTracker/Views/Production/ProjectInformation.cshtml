@@ -1,0 +1,339 @@
+﻿@section pagecss {
+    @Html.IncludeVersionedCss("/pages/production-projectinformation.css")
+}
+
+@section pagejs {
+    @Html.IncludeVersionedJs("/pages/production-projectinformation-model.js")
+    @Html.IncludeVersionedJs("/pages/production-projectinformation.js")
+}
+
+
+<div id="contentWrap">
+    <div id="tabstrip">
+        <ul>
+            <li class="k-state-active">
+                Customer Social Accounts
+            </li>
+            <li>
+                Keywords & Landing Pages
+            </li>
+            <li>
+                Personas
+            </li>
+            <li class="no-tab">
+                Select Project:
+                <div id="select-project"></div>
+            </li>
+        </ul>
+
+        @*Customer Social Accounts Section*@
+        <div>
+            <div class="sectionbox">
+                <div class="heading-blue">
+                    <h5>Social Accounts</h5>
+                </div>
+                <div class="content-box">
+                    <div id="grd-social-accounts"></div>
+                </div>
+            </div>
+            <div id="win-new-social-account">
+                <table id="tbl-new-social-account" class="formdata">
+                    <tr>
+                        <td>Name:</td>
+                        <td><input id="new-name" /></td>
+                        <td>URL:</td>
+                        <td><input id="new-url-social-account" /></td>
+                    </tr>
+                    <tr>
+                        <td>Username:</td>
+                        <td><input id="new-username" /></td>
+                        <td>Password:</td>
+                        <td><input id="new-password" /></td>
+                    </tr>
+                </table>
+                <button id="btn-save-social-account" class="smallbutton">Save Social Account</button>
+            </div>
+        </div>
+
+        @*Keywords & Landing Pages Section*@
+
+        <div>
+            <div class="sectionbox">
+                <div class="heading-blue">
+                    <h5>Strategy</h5>
+                </div>
+                <div class="content-box">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="heading-blue">
+                                    <h5>Custom Strategies</h5>
+                                </div>
+                                <textarea rows="10" id="custom-strategy" class="strategy-boxes" placeholder="Input custom strategy details here"></textarea>
+                            </td>
+                            <td>
+                                <div class="heading-blue">
+                                    <h5>Special Requirements</h5>
+                                </div>
+                                <textarea rows="10" id="special-requirements" class="strategy-boxes" placeholder="Input special requirements here"></textarea>
+                            </td>
+                            <td>
+                                <div class="heading-blue">
+                                    <h5>Big Win</h5>
+                                </div>
+                                <textarea rows="10" id="big-win" class="strategy-boxes" placeholder='Input "Big win" here'></textarea>
+                            </td>
+                        </tr>
+                    </table>                    
+                    <button id="save-strategies" class="smallbutton">Save Strategies</button>
+                </div>
+            </div>
+            <div class="left-box">
+                <div class="sectionbox">
+                    <div class="heading-blue">
+                        <h5>Keywords</h5>
+                    </div>
+                    <div class="content-box">
+                        <div id="grd-keywords"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="win-new-keyword">
+                <table id="tbl-new-keyword" class="formdata">
+                    <tr>
+                        <td>Keyword:</td>
+                        <td><input id="new-keyword" /></td>
+                        <td>Priority:</td>
+                        <td><input id="new-priority-keyword" /></td>
+                    </tr>
+                </table>
+                <button id="btn-save-keyword" class="smallbutton">Save Keyword</button>
+            </div>
+            <div class="right-box">
+                @*<div class="sectionbox">
+                    <div class="heading-blue">
+                        <h5>Landing Pages</h5>
+                    </div>*@
+                <div class="content-box">
+                    <table id="grd-custom-landing-page" style="width: 100%">
+                        <tr class="heading-blue">
+                            <td>Landing Page URL</td>
+                            <td colspan="3">Priority</td>
+                        </tr>
+                    </table>
+                    <button class="smallbutton" id="btn-new-landing-page" style="width: 100%">New Landing Page</button>
+                </div>
+                @*</div>*@
+            </div>
+            <div style="clear: both;"></div>
+            <div id="win-new-landing-page">
+                <table id="tbl-new-landing-page" class="formdata">
+                    <tr>
+                        <td>URL:</td>
+                        <td><input id="new-url-landing-page" /></td>
+                        <td>Priority:</td>
+                        <td><input id="new-priority-landing-page" /></td>
+                    </tr>
+                </table>
+                <button id="btn-save-landing-page" class="smallbutton">Save Landing Page</button>
+            </div>
+            <div id="win-new-landing-page-keyword">
+                <table id="tbl-new-landing-page-keyword" class="formdata">
+                    <tr>
+                        <td>Keyword:</td>
+                        <td><input id="new-landing-page-keyword" /></td>
+                        <td>Priority:</td>
+                        <td><input id="landing-page-keyword-priority" /></td>
+                    </tr>
+                </table>
+                <button id="btn-save-landing-page-keyword" class="smallbutton">Attach to Landing Page</button>
+            </div>
+
+        </div>
+
+        @*Personas Section*@
+
+        <div>
+                <div class="content-box">
+                    <div id="client-project-selector" class="formdata">
+                        <input id="select-persona" class="spacer" />
+                        <button id="btn-new-persona" class="smallbutton">New Persona</button>
+                        <button id="btn-delete-persona" class="smallbutton">Delete</button>
+                    </div>
+                    <div id="win-new-persona">
+                        <table id="tbl-new-persona" class="formdata">
+                            <tr>
+                                <td>Email:</td>
+                                <td><input id="new-persona-email" /></td>
+                            </tr>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input id="new-persona-name" /></td>
+                                <td>Date of Birth:</td>
+                                <td><input id="new-persona-date-of-birth" /></td>
+                            </tr>
+                            <tr>
+                                <td>Professional Experience:</td>
+                                <td><textarea id="new-persona-professional-experience" rows="4" class="wide"></textarea></td>
+                                <td>Connection to Client:</td>
+                                <td><textarea id="new-persona-connection-to-client" rows="4" class="wide"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Specific Bio:</td>
+                                <td><textarea id="new-persona-specific-bio" rows="4" class="wide"></textarea></td>
+                                <td>Notes:</td>
+                                <td><textarea id="new-persona-notes" rows="4" class="wide"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Gmail User:</td>
+                                <td><input id="new-persona-gmail-user" /></td>
+                                <td>Gmail Password:</td>
+                                <td><input id="new-persona-gmail-password" /></td>
+                            </tr>
+                            <tr>
+                                <td>Domain User:</td>
+                                <td><input id="new-persona-user" /></td>
+                                <td>Domain Password:</td>
+                                <td><input id="new-persona-password" /></td>
+                            </tr>
+                            <tr>
+                                <td>SMTP Server:</td>
+                                <td><input id="new-persona-smtpserver"/></td>
+                                <td>SMTP Port:</td>
+                                <td><input id="new-persona-smtpport" /></td>
+                            </tr>
+                            <tr>
+                                <td>SMTP Username:</td>
+                                <td><input id="new-persona-smtpusername" /></td>
+                                <td>SMTP Password:</td>
+                                <td><input id="new-persona-smtppassword" /></td>
+                            </tr>
+                        </table>
+                        <button id="btn-save-persona" class="smallbutton">Save Persona</button>
+                        <span id="new-persona-notify" class="notifications"></span>
+                    </div>
+                </div>
+            <div class="left-box short">
+                <div class="sectionbox">
+                    <div class="heading-blue">
+                        <h5>Persona Details</h5>
+                    </div>
+                    <div class="content-box formdata">
+                        <table>
+                            <tr>
+                                <td>Name:</td>
+                                <td><input id="persona-name" /></td>
+                            </tr>
+                            <tr>
+                                <td> Date of Birth:</td>
+                                <td><input id="date-of-birth" /></td>
+                            </tr>
+                            <tr>
+                                <td>Professional Experience:</td>
+                                <td><textarea id="professional-experience" rows="4" class="wide"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Connection to Client:</td>
+                                <td><textarea id="connection-to-client" rows="4" class="wide"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Specific Bio:</td>
+                                <td><textarea id="specific-bio" rows="4" class="wide"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td>Notes:</td>
+                                <td><textarea id="notes" rows="4" class="wide"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td><button id="update-persona" class="smallbutton">Update</button></td>
+                                <td><span id="update-persona-notify" class="notifications"></span></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="right-box long">
+                <div class="sectionbox">
+                    <div class="heading-blue">
+                        <h5>Email Account Login Details</h5>
+                    </div>
+                    <div class="content-box formdata">
+                        <table>
+                            <tr>
+                                <td>Email:</td>
+                                <td><input id="persona-email"/></td>
+                            </tr>
+                            <tr>
+                                <td>Gmail Username:</td>
+                                <td><input id="gmail-username" /></td>
+                                <td>Gmail Password:</td>
+                                <td><input id="gmail-password" /></td>
+                            </tr>
+                            <tr>
+                                <td>Domain Email URL:</td>
+                                <td><input id="domain-email" /></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Domain Username:</td>
+                                <td><input id="domain-username" /></td>
+                                <td>Domain Password:</td>
+                                <td><input id="domain-password" /></td>
+                            </tr>
+                            <tr>
+                                <td>SMTP Server:</td>
+                                <td><input id="persona-smtpserver" /></td>
+                                <td>SMTP Port:</td>
+                                <td><input id="persona-smtpport" /></td>
+                            </tr>
+                            <tr>
+                                <td>SMTP Username:</td>
+                                <td><input id="persona-smtpusername" /></td>
+                                <td>SMTP Password:</td>
+                                <td><input id="persona-smtppassword" /></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="sectionbox temp-height">
+                    <div class="heading-blue">
+                        <h5>Persona Images</h5>
+                    </div>
+                    <div class="content-box">
+                        <button class="smallbutton" id="new-persona-img">New Image</button>
+                    </div>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+            <div class="sectionbox">
+                <div class="heading-blue">
+                    <h5>Social Media Account URLs</h5>
+                </div>
+                <div class="content-box formdata">
+                    <div id="grd-persona-social-accounts"></div>
+                </div>
+            </div>
+            <div id="win-new-persona-social-account">
+                <table id="tbl-new-persona-social-account" class="formdata">
+                    <tr>
+                        <td>Name:</td>
+                        <td><input id="new-persona-social-account-name" /></td>
+                        <td>URL:</td>
+                        <td><input id="new-persona-social-account-url" /></td>
+                    </tr>
+                    <tr>
+                        <td>Username:</td>
+                        <td><input id="new-persona-social-account-username" /></td>
+                        <td>Password:</td>
+                        <td><input id="new-persona-social-account-password" /></td>
+                    </tr>
+                </table>
+                <button id="btn-save-persona-social-account" class="smallbutton">Save Persona Social Account</button>
+            </div>
+            <div id="win-new-persona-img">
+                <input id="persona-img-upload" type="file" />
+                <img id="img-test" class="preview-img">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98455423-230E-4DC7-BCAB-47C16A7E3052}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>p1p.Business</RootNamespace>
+    <AssemblyName>p1p.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.2\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArticleRepository.cs" />
+    <Compile Include="CustomerRepository.cs" />
+    <Compile Include="EmployeeRepository.cs" />
+    <Compile Include="Helpers\DocumentUtility.cs" />
+    <Compile Include="Helpers\IdentityHelper.cs" />
+    <Compile Include="LandingPageRepository.cs" />
+    <Compile Include="LinkRepository.cs" />
+    <Compile Include="Helpers\MathUtility.cs" />
+    <Compile Include="OutreachRepository.cs" />
+    <Compile Include="P1PObjectMapper.cs" />
+    <Compile Include="PersonaRepository.cs" />
+    <Compile Include="ProjectRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportRepository.cs" />
+    <Compile Include="Helpers\SecurityHelper.cs" />
+    <Compile Include="StaticDataRepository.cs" />
+    <Compile Include="TeamRepository.cs" />
+    <Compile Include="TimeRepository.cs" />
+    <Compile Include="UserRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\p1p.Data\p1p.Data.csproj">
+      <Project>{adba4eb8-eb35-4685-8141-c11abe0a979c}</Project>
+      <Name>p1p.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\p1p.Search\p1p.Search.csproj">
+      <Project>{e7643d42-77b1-4e00-8c1d-8b88e44d54a0}</Project>
+      <Name>p1p.Search</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\p1p.Types\p1p.Types.csproj">
+      <Project>{a72fa765-5a65-41ee-a340-ea7d16923381}</Project>
+      <Name>p1p.Types</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

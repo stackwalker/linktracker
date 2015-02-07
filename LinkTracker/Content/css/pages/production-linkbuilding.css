@@ -1,0 +1,138 @@
+﻿.tbl-link-building {
+    width: 100%;
+}
+
+td {
+    padding: 5px;
+}
+
+input, textarea{
+    padding-top: 9px;
+    padding-bottom: 9px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 13px/100%;	
+	background: #FFFFFF;
+}
+#target-form input { 
+    width: 100%;
+}
+
+#target-form textarea{
+    width: 900px;
+}
+
+input:hover, textarea:hover, select:hover,
+input:focus, textarea:focus, select:focus { 
+	border-color: #C9C9C9; 
+	}
+
+.form label { 
+	margin-left: 10px; 
+	color: #999999; 
+	}
+
+.btn-spacer {
+    margin-left: 8px;
+}
+
+#btn-save-outreach{
+    margin: 0 0 0 10px;
+}
+.submit input {
+	width: auto;
+	padding: 9px 15px;
+	background: #617798;
+	border: 0;
+	font-size: 14px;
+	color: #FFFFFF;
+	}
+
+select {
+    padding:3px;
+    margin: 0;
+    background: #ffffff;
+    color:#888;
+    /*border:none;*/
+    outline:none;
+    display: inline-block;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    /*appearance:none;*/
+    cursor:pointer;
+}
+
+.section-parameters input{
+    width: 145px;
+}
+
+#email-parameters input{
+    width: 415px;
+}
+.validation-message{
+
+}
+
+.error{
+    color: red;
+}
+
+.success{
+    color: green;
+}
+/* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {
+    select {padding-right:18px}
+}
+
+label {position:relative}
+label:after {
+    content:'>';
+    font:18px "Consolas", monospace;
+    color:#ffffff;
+    -webkit-transform:rotate(90deg);
+    -moz-transform:rotate(90deg);
+    -ms-transform:rotate(90deg);
+    transform:rotate(90deg);
+    right:8px; top:2px;
+    padding:0 0 2px;
+    border-bottom:1px solid #ddd;
+    position:absolute;
+    pointer-events:none;
+}
+label:before {
+    content:'';
+    right:0px; top:0px;
+    width:30px; height:30px;
+    background:#b0c3c7;
+    position:absolute;
+    pointer-events:none;
+    display:block;
+}*/
+
+/*button{
+text-align:center;
+text-decoration: none;
+font-family: sans-serif;
+-webkit-font-smoothing: antialiased;
+font-size: 150%;
+color: #FFF;
+background: #6A8E95;
+padding: 10px 30px;
+display: inline-block;
+white-space: nowrap;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 2px;
+margin: 10px 0;
+-webkit-transition: all 0.2s ease-in-out;
+-ms-transition: all 0.2s ease-in-out;
+-moz-transition: all 0.2s ease-in-out;
+-o-transition: all 0.2s ease-in-out;
+transition: all 0.2s ease-in-out;
+}
+button:hover {
+background: rgba(0, 0, 0, 0.45);
+}*/
+
+/* Mode Switch CSS*/

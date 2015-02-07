@@ -1,0 +1,9 @@
+﻿.clientInfo {
+    display: none;
+}
+
+.btn {
+    height: 23px;
+    line-height: 1.2em;
+    color: white;
+}

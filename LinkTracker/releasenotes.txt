@@ -1,0 +1,13 @@
+﻿<h4><b>Release Notes for Link Tracker Version r1.09</b></h4><br/>
+<br/>
+<b>Added integrated Email/Outreach Functionality.</b>
+<br />
+Personas must be populated with the appropriate email addresses, usernames and passwords
+<br/>
+Added the ability to attach articles to outreach as Word Attachments
+<br/>
+<br/>
+<b>Changed some metrics in the Client Dashboard</b>
+
+
+

@@ -1,0 +1,71 @@
+﻿@{
+    var menus = new[]
+        {
+            new { LinkText="Dashboard", TargetUrl="/Home/Employee", Roles="Manager,Employee,Admin", DataTag="", CssClass="headerMenuBtn"},
+            new { LinkText="Production", TargetUrl="", Roles="Manager,Employee,Admin", DataTag="Production", CssClass="headerMenuBtn"},
+            new { LinkText="Administration", TargetUrl="", Roles="Manager,Admin", DataTag="Admin", CssClass="headerMenuBtn"},
+            new { LinkText="Client Dashboard", TargetUrl="/Client", Roles="Manager,Employee,Admin", DataTag="", CssClass="headerMenuBtn"},
+        };
+
+    var dropDownMenus = new[]
+        {
+            new { LinkText="Customer", TargetUrl="/Admin/Customer", Roles="Manager,Admin", DataTag="AdminMenu", CssClass="headerMenuBtn"},                        
+            new { LinkText="Employee", TargetUrl="/Admin/Employee", Roles="Manager,Admin", DataTag="AdminMenu", CssClass="headerMenuBtn"},
+            new { LinkText="Hours Upload", TargetUrl="/Admin/Hours", Roles="Manager,Admin", DataTag="AdminMenu", CssClass="headerMenuBtn"},
+            new { LinkText="Build Links", TargetUrl="/Production/LinkBuilding", Roles="Manager,Employee,Admin", DataTag="ProductionMenu", CssClass="headerMenuBtn"},
+            new { LinkText="Articles", TargetUrl="/Production/Article", Roles="Manager,Employee,Admin", DataTag="ProductionMenu", CssClass="headerMenuBtn"},
+            new { LinkText="Projects", TargetUrl="/Production/ProjectInformation", Roles="Manager,Employee,Admin", DataTag="ProductionMenu", CssClass="headerMenuBtn"},
+        };   
+}
+
+<ul class="header_actions pull-left" id="headerMenu">
+    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+    {
+        String[] roles = Roles.GetRolesForUser();
+        if (roles.Count() == 1 && roles[0] == "Client")
+        {
+            <li><a href="/Client" class="logo_image"></a></li>
+        }
+        else
+        {
+            <li><a href="/" class="logo_image"></a></li>
+        var links = from lnk in menus
+                    where lnk.Roles.Split(new String[] { "," }, StringSplitOptions.RemoveEmptyEntries)
+                    .Any(x => roles.Contains(x) || x == "All")
+                    select lnk;
+        foreach (var link in links)
+        {
+            //todo : make sure that the links are centered (style="line-height: 3em") if javascript doesn't fix
+
+            if (@link.DataTag != "")
+            {
+                        <li>
+    @link.LinkText
+
+<ul id="@link.DataTag" class="headerDropDown">
+    @{
+                var dropDownLinks = from lnk in dropDownMenus
+                                    where lnk.DataTag.Contains(@link.DataTag + "Menu")
+                                    select lnk;
+                foreach (var dropDownLink in dropDownLinks)
+                {
+                    <li><a href="@dropDownLink.TargetUrl" class="menuDropDown @dropDownLink.CssClass">@dropDownLink.LinkText</a></li>
+                }
+    }
+</ul>
+</li>
+            }
+            else
+            {
+        @: <li><a href="@link.TargetUrl" class="@link.CssClass">@link.LinkText</a>
+
+            }
+        }
+        }
+    }
+    else
+    {
+        <li><a href="/" class="logo_image"></a></li>   
+    }
+
+</ul>

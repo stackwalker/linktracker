@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A72FA765-5A65-41EE-A340-EA7D16923381}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>p1p.Types</RootNamespace>
+    <AssemblyName>p1p.Types</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DTO\AggregateDTO.cs" />
+    <Compile Include="DTO\ArticleDTO.cs" />
+    <Compile Include="DTO\ArticleSummaryDTO.cs" />
+    <Compile Include="DTO\ClientReportDTO.cs" />
+    <Compile Include="DataPoint.cs" />
+    <Compile Include="DTO\CustomerDTO.cs" />
+    <Compile Include="DTO\DocumentDTO.cs" />
+    <Compile Include="DTO\EmployeeDashboardAggregateReportDTO.cs" />
+    <Compile Include="DTO\EmployeeDetailDTO.cs" />
+    <Compile Include="DTO\EmployeeDTO.cs" />
+    <Compile Include="DTO\KeyValueDTO.cs" />
+    <Compile Include="DTO\KeywordDetailDTO.cs" />
+    <Compile Include="DTO\KeywordDTO.cs" />
+    <Compile Include="DTO\LandingPageDetailDTO.cs" />
+    <Compile Include="DTO\LandingPageDTO.cs" />
+    <Compile Include="DTO\LinkDTO.cs" />
+    <Compile Include="DTO\LinksWithAggregatesDTO.cs" />
+    <Compile Include="DTO\LookupDTO.cs" />
+    <Compile Include="DTO\OutreachDTO.cs" />
+    <Compile Include="DTO\PersonaDetailDTO.cs" />
+    <Compile Include="DTO\PersonaDTO.cs" />
+    <Compile Include="DTO\ProjectDTO.cs" />
+    <Compile Include="DTO\SocialAccountDetailDTO.cs" />
+    <Compile Include="DTO\SocialAccountDTO.cs" />
+    <Compile Include="DTO\TeamDTO.cs" />
+    <Compile Include="DTO\TimeEntryDTO.cs" />
+    <Compile Include="KronosTimeEntry.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportTimeSpan.cs" />
+    <Compile Include="DTO\RoleDTO.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

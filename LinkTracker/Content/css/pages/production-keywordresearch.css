@@ -1,0 +1,23 @@
+﻿body {
+}
+
+#tblKeywordTasks th {
+    background: #6A8E95;
+    color: #ffffff;
+    font-size: 1.2em;
+    padding: 5px 5px 5px 5px;
+    text-align: left;
+}
+
+#tblKeywordTasks td {
+    padding: 5px;
+    border: solid 1px #E5E5E5;
+}
+
+.conceptcontainer {
+    margin: 0 0 15px 0;
+}
+
+.competitorcontainer {
+    margin: 0 0 15px 0;
+}
